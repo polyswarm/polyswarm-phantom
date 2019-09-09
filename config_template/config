@@ -1,0 +1,11 @@
+# Remote node configuration
+REMOTE_IP='XX.XX.XX.XX'
+REMOTE_PORT='22'
+REMOTE_USER='user'
+
+# Phantom config
+PHANTOM_USER='user'
+PHANTOM_PASS='pass'
+
+# Polyswarm API KEY
+POLYSWARM_API_KEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'

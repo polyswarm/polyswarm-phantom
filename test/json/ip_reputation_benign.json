@@ -1,0 +1,17 @@
+{
+    "app_config": null,
+    "asset_id": "22",
+    "config": {
+               "base_url": "https://api.polyswarm.network/v1",
+               "polyswarm_api_key":"REPLACE_API_KEY",
+               "polyswarm_community": "lima"
+    },
+    "debug_level": 3,
+    "identifier": "ip_reputation",
+    "parameters": [
+        {
+            "ip":"8.8.8.8"
+        }
+
+    ]
+}

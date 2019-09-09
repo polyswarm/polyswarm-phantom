@@ -1,0 +1,18 @@
+{
+    "app_config": null,
+    "asset_id": "22",
+    "config": {
+               "base_url": "https://api.polyswarm.network/v1",
+               "polyswarm_api_key":"REPLACE_API_KEY",
+               "polyswarm_community": "lima"
+    },
+    "debug_level": 3,
+    "identifier": "file_reputation",
+    "parameters": [
+        {
+        "hash":"cf56a5afa420d612993f010e389bbf69af11c4768a2a7abc15d6fbd004c39655"
+        }
+
+    ]
+}
+
