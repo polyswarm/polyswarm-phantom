@@ -70,6 +70,23 @@ class Polyswarm_API:
 
         return (r.status_code, r.content)
 
+    def _get_hash_type(self, hash):
+        """
+        Return Hash Type
+
+        :param hash: hash string
+
+        :return: hash type string; empty if failed
+        """
+        if len(hash) == 40:
+            return 'sha1'
+        elif len(hash) == 64:
+            return 'sha256'
+        elif len(hash) == 32:
+            return 'md5'
+
+        return ''
+
     def search_hash(self, hash):
         """
         Search Hash
@@ -78,14 +95,7 @@ class Polyswarm_API:
 
         :return: tuple (status_code, response)
         """
-        hash_type = None
-
-        if len(hash) == 40:
-            hash_type = 'sha1'
-        elif len(hash) == 64:
-            hash_type = 'sha256'
-        elif len(hash) == 32:
-            hash_type = 'md5'
+        hash_type = self._get_hash_type(hash)
 
         params = {'type': hash_type,
                   'with_instances': 'true',
@@ -159,16 +169,7 @@ class Polyswarm_API:
 
         :return: tuple (status_code, response)
         """
-        print('len: {len}'.format(len=len(hash)))
-        if len(hash) == 32:
-            hash_type = 'md5'
-        elif len(hash) == 40:
-            hash_type = 'sha1'
-        elif len(hash) == 64:
-            hash_type = 'sha256'
-        else:
-            # error hash_type handle by Phantom
-            pass
+        hash_type = self._get_hash_type(hash)
 
         logging.info('[get_file] Hash type: {hash_type}'.
                        format(hash_type=hash_type))
