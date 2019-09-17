@@ -74,11 +74,20 @@ class Polyswarm_API:
         """
         Search Hash
 
-        :param hash: sha256 hash
+        :param hash: hash
 
         :return: tuple (status_code, response)
         """
-        params = {'type': 'sha256',
+        hash_type = None
+
+        if len(hash) == 40:
+            hash_type = 'sha1'
+        elif len(hash) == 64:
+            hash_type = 'sha256'
+        elif len(hash) == 32:
+            hash_type = 'md5'
+
+        params = {'type': hash_type,
                   'with_instances': 'true',
                   'hash': hash}
 
