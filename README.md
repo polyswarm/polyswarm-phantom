@@ -19,11 +19,11 @@
 │   ├── compile.sh # bash script - compile and install the APP
 │   ├── exclude_files.txt
 │   ├── __init__.py
+│   ├── logo_polyswarm_dark.svg
+│   ├── logo_polyswarm.svg
 │   ├── polyswarm_connector.py # main APP code
 │   ├── polyswarm_consts.py # const
-│   ├── polyswarm_dark.png
 │   ├── polyswarm.json # actions configuration file
-│   ├── polyswarm.png
 │   └── readme.html
 ├── config_template # template for remote node configuration
 │   └── config
@@ -51,6 +51,7 @@
     │   ├── get_file_exists.json
     │   ├── get_file_FileDoesNotExist.json
     │   ├── get_report_EICAR.json
+    │   ├── get_report_malware.json
     │   ├── ip_reputation_benign.json
     │   ├── ip_reputation_malicious.json
     │   ├── test_connectivity.json
